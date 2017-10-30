@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		713924111FA7672800F1A2DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71E8DBA31FA62E800051BDD7 /* Main.storyboard */; };
+		713924131FA7692700F1A2DE /* Screen Shot 2017-10-27 at 11.55.14 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = 713924101FA764E100F1A2DE /* Screen Shot 2017-10-27 at 11.55.14 AM.png */; };
+		713924151FA76A2700F1A2DE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713924141FA76A2700F1A2DE /* GameViewController.swift */; };
 		71E8DBA01FA62E800051BDD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E8DB9F1FA62E800051BDD7 /* AppDelegate.swift */; };
 		71E8DBA21FA62E800051BDD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E8DBA11FA62E800051BDD7 /* ViewController.swift */; };
-		71E8DBA51FA62E800051BDD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71E8DBA31FA62E800051BDD7 /* Main.storyboard */; };
 		71E8DBA81FA62E800051BDD7 /* Book_Collector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71E8DBA61FA62E800051BDD7 /* Book_Collector.xcdatamodeld */; };
 		71E8DBAA1FA62E800051BDD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71E8DBA91FA62E800051BDD7 /* Assets.xcassets */; };
 		71E8DBAD1FA62E800051BDD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71E8DBAB1FA62E800051BDD7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		713924101FA764E100F1A2DE /* Screen Shot 2017-10-27 at 11.55.14 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-10-27 at 11.55.14 AM.png"; sourceTree = "<group>"; };
+		713924121FA7679C00F1A2DE /* Deans List 2017:18.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Deans List 2017:18.jpeg"; sourceTree = "<group>"; };
+		713924141FA76A2700F1A2DE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		71E8DB9C1FA62E800051BDD7 /* Book Collector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Collector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E8DB9F1FA62E800051BDD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71E8DBA11FA62E800051BDD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +64,10 @@
 				71E8DB9F1FA62E800051BDD7 /* AppDelegate.swift */,
 				71E8DBA11FA62E800051BDD7 /* ViewController.swift */,
 				71E8DBA31FA62E800051BDD7 /* Main.storyboard */,
+				713924141FA76A2700F1A2DE /* GameViewController.swift */,
+				713924121FA7679C00F1A2DE /* Deans List 2017:18.jpeg */,
 				71E8DBA91FA62E800051BDD7 /* Assets.xcassets */,
+				713924101FA764E100F1A2DE /* Screen Shot 2017-10-27 at 11.55.14 AM.png */,
 				71E8DBAB1FA62E800051BDD7 /* LaunchScreen.storyboard */,
 				71E8DBAE1FA62E800051BDD7 /* Info.plist */,
 				71E8DBA61FA62E800051BDD7 /* Book_Collector.xcdatamodeld */,
@@ -126,9 +134,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713924131FA7692700F1A2DE /* Screen Shot 2017-10-27 at 11.55.14 AM.png in Resources */,
+				713924111FA7672800F1A2DE /* Main.storyboard in Resources */,
 				71E8DBAD1FA62E800051BDD7 /* LaunchScreen.storyboard in Resources */,
 				71E8DBAA1FA62E800051BDD7 /* Assets.xcassets in Resources */,
-				71E8DBA51FA62E800051BDD7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713924151FA76A2700F1A2DE /* GameViewController.swift in Sources */,
 				71E8DBA81FA62E800051BDD7 /* Book_Collector.xcdatamodeld in Sources */,
 				71E8DBA21FA62E800051BDD7 /* ViewController.swift in Sources */,
 				71E8DBA01FA62E800051BDD7 /* AppDelegate.swift in Sources */,

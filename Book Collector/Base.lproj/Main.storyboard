@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gTe-YZ-NQP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,113 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Book_Collector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6dO-yr-Hqa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pux-HT-hyY">
+                            <connections>
+                                <segue destination="z9z-rB-n4n" kind="show" id="lcf-Nd-p4N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="476" y="118.29085457271366"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="BGB-P3-6G3">
+            <objects>
+                <viewController id="z9z-rB-n4n" customClass="GameViewController" customModule="Book_Collector" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aAw-dH-Lkg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Screenshot Collector" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxJ-2r-cpq">
+                                <rect key="frame" x="40" y="284" width="295" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gss-aK-jRX">
+                                <rect key="frame" x="172" y="354" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="z9z-rB-n4n" eventType="touchUpInside" id="DeC-ti-qno"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2017-10-27 at 11.55.14 AM.png" translatesAutoresizingMaskIntoConstraints="NO" id="s4r-WC-7UT">
+                                <rect key="frame" x="40" y="114" width="295" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="UKa-mN-5Ka"/>
+                                    <constraint firstAttribute="width" constant="295" id="Vbc-QB-IxK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gss-aK-jRX" firstAttribute="top" secondItem="fxJ-2r-cpq" secondAttribute="bottom" constant="40" id="1Kz-tM-ZE9"/>
+                            <constraint firstItem="17z-ea-r8F" firstAttribute="trailing" secondItem="s4r-WC-7UT" secondAttribute="trailing" constant="40" id="BWe-3y-Q8J"/>
+                            <constraint firstItem="s4r-WC-7UT" firstAttribute="centerX" secondItem="aAw-dH-Lkg" secondAttribute="centerX" id="Es0-vy-i2U"/>
+                            <constraint firstItem="fxJ-2r-cpq" firstAttribute="top" secondItem="s4r-WC-7UT" secondAttribute="bottom" constant="42" id="Gtk-sP-Ob6"/>
+                            <constraint firstItem="s4r-WC-7UT" firstAttribute="leading" secondItem="17z-ea-r8F" secondAttribute="leading" constant="40" id="T3F-u1-iGY"/>
+                            <constraint firstItem="s4r-WC-7UT" firstAttribute="top" secondItem="17z-ea-r8F" secondAttribute="top" constant="50" id="bp7-gU-gTc"/>
+                            <constraint firstItem="fxJ-2r-cpq" firstAttribute="centerX" secondItem="aAw-dH-Lkg" secondAttribute="centerX" id="g42-Dl-H5t"/>
+                            <constraint firstItem="gss-aK-jRX" firstAttribute="centerX" secondItem="aAw-dH-Lkg" secondAttribute="centerX" id="qhW-08-uo3"/>
+                            <constraint firstItem="fxJ-2r-cpq" firstAttribute="width" secondItem="s4r-WC-7UT" secondAttribute="width" id="qii-I8-H9K"/>
+                            <constraint firstItem="fxJ-2r-cpq" firstAttribute="top" secondItem="s4r-WC-7UT" secondAttribute="bottom" constant="42" id="ykW-RL-nfy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="17z-ea-r8F"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Edd-Dy-qf7">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="t66-qi-yQt">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="MKt-Bp-MIl" id="xhz-q9-UWL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="Gou-3m-zcC">
+                                <connections>
+                                    <action selector="photosTapped:" destination="MKt-Bp-MIl" id="ASp-FC-rjo"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="screenshotImageView" destination="s4r-WC-7UT" id="CzS-zm-O5S"/>
+                        <outlet property="titleTextField" destination="fxJ-2r-cpq" id="IlW-be-eQV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mcv-iX-bMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MKt-Bp-MIl" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1318" y="118"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MJ2-Sn-UHh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gTe-YZ-NQP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mtF-og-sbk">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="B5p-cc-RYz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dcs-v0-u8v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-235.19999999999999" y="43.178410794602705"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Screen Shot 2017-10-27 at 11.55.14 AM.png" width="1063" height="532"/>
+    </resources>
 </document>
