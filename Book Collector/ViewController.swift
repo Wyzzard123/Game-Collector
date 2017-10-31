@@ -41,7 +41,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = UITableViewCell()
         let screenshot = screenshots[indexPath.row]
         cell.textLabel?.text = screenshot.title
-        cell.imageView?.image = UIImage(data: screenshot.image as! Data) //type UIImage(d and get this. Need to convert data into image cos it's only Data in the core data now. Have to put data cos it asks for data, not NSData.
+        cell.imageView?.image = UIImage(data: screenshot.image as Data!) //type UIImage(d and get this. Need to convert data into image cos it's only Data in the core data now. Have to put data cos it asks for data, not NSData.
         return cell
     }
     
