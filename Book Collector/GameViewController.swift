@@ -20,7 +20,16 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBOutlet weak var screenshotImageView: UIImageView!
     
-    @IBAction func addTapped(_ sender: Any) {
+    @IBAction func addTapped(_ sender: Any) {//what happens when tap Add button
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let screenshot = ScreenShot(context: context) //context: nsmanaged object replaced w context
+        screenshot.title = titleTextField.text
+        screenshot.image = UIImagePNGRepresentation(screenshotImageView.image!) //rmb this "image" is binary data not uiimage so have to convert by converting to png or jpg
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        navigationController!.popViewController(animated: true)
+       
+        
     }
     
     override func viewDidLoad() {
@@ -45,5 +54,7 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         screenshotImageView.image = image //setting the imageview image to the image we got from the image picker
         imagePicker.dismiss(animated: true, completion: nil) //if you don't dismiss there'll be an error so you have to get rid of the imagePicker controller
     }
-
+    //Core data notes:
+    //have to put stuff with "Allows External Storage" or else the app will run super slow cos there's image (for coredata. Click shield.
+    //can uncheck optional for the entities as well. Then you can't save stuff that isn't the same type
 }
